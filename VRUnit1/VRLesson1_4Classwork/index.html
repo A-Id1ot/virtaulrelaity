@@ -1,36 +1,121 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-
       <!-- Task 1: Wrap the components below into an entity. "Label" it snowman -->
       <!-- Task 2: Duplicate the snowman to different locations and rotation -->
-        <!-- Body -->
-        <a-sphere position="0 0.5 -0.5" radius="1.25" color="white"></a-sphere>
-        <a-sphere position="0 2.25 -0.5" radius="1.05" color="white"></a-sphere>
-        <a-sphere position="0 3.5 -0.5" radius=".85" color="white"></a-sphere>
+      <a-box class="snowman">
+      <!-- Body -->
+        <a-box>
+          <a-sphere position="0 0.5 -0.5" radius="1.25" color="white"></a-sphere>
+          <a-sphere position="0 2.25 -0.5" radius="1.05" color="white"></a-sphere>
+          <a-sphere position="0 3.5 -0.5" radius=".85" color="white"></a-sphere>
+        </a-box>
         <!-- Eyes -->
-        <a-sphere position="-0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
-        <a-sphere position="0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
+        <a-box>
+          <a-sphere position="-0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
+          <a-sphere position="0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
+        </a-box>
         <!-- Nose and Arms -->
-        <a-cone position="0 3.25 0.5"  rotation="90 0 0" color="tomato" height="0.5" radius-bottom=".1" radius-top="0.01"></a-cone>
-        <a-cylinder position="-1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 60" height="2" radius="0.15"></a-cylinder>
-        <a-cylinder position="1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 -60" height="2" radius="0.15"></a-cylinder>
-      
+        <a-box>
+          <a-cone position="0 3.25 0.5"  rotation="90 0 0" color="tomato" height="0.5" radius-bottom=".1" radius-top="0.01"></a-cone>
+          <a-cylinder position="-1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 60" height="2" radius="0.15"></a-cylinder>
+          <a-cylinder position="1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 -60" height="2" radius="0.15"></a-cylinder>
+        </a-box>
+      </a-box>
 
+      <!-- Body -->
+      <a-box class="snowman" height="1" width="1" position="-5 0 0" rotation="0 90 0">
+        <a-box>
+          <a-sphere position="0 0.5 -0.5" radius="1.25" color="white"></a-sphere>
+          <a-sphere position="0 2.25 -0.5" radius="1.05" color="white"></a-sphere>
+          <a-sphere position="0 3.5 -0.5" radius=".85" color="white"></a-sphere>
+        </a-box>
+        <!-- Eyes -->
+        <a-box>
+          <a-sphere position="-0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
+          <a-sphere position="0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
+        </a-box>
+        <!-- Nose and Arms -->
+        <a-box>
+          <a-cone position="0 3.25 0.5"  rotation="90 0 0" color="tomato" height="0.5" radius-bottom=".1" radius-top="0.01"></a-cone>
+          <a-cylinder position="-1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 60" height="2" radius="0.15"></a-cylinder>
+          <a-cylinder position="1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 -60" height="2" radius="0.15"></a-cylinder>
+        </a-box>
+      </a-box>
+
+      <!-- Body -->
+      <a-box class="snowman" height="1" width="1" position="5 0 0" rotation="0 -90 0">
+        <a-box>
+          <a-sphere position="0 0.5 -0.5" radius="1.25" color="white"></a-sphere>
+          <a-sphere position="0 2.25 -0.5" radius="1.05" color="white"></a-sphere>
+          <a-sphere position="0 3.5 -0.5" radius=".85" color="white"></a-sphere>
+        </a-box>
+        <!-- Eyes -->
+        <a-box>
+          <a-sphere position="-0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
+          <a-sphere position="0.25 3.5 0.25" radius=".15" color="black"></a-sphere>
+        </a-box>
+        <!-- Nose and Arms -->
+        <a-box>
+          <a-cone position="0 3.25 0.5"  rotation="90 0 0" color="tomato" height="0.5" radius-bottom=".1" radius-top="0.01"></a-cone>
+          <a-cylinder position="-1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 60" height="2" radius="0.15"></a-cylinder>
+          <a-cylinder position="1.25 2.75 -0.25" color="#A52A2A" rotation="0 0 -60" height="2" radius="0.15"></a-cylinder>
+        </a-box>
+      </a-box>
+      
       <!-- Task 3: Wrap the components below into an entity. "Label" it tree -->
       <!-- Task 4: Duplicate the tree to different locations and rotation -->
+      <a-box class="tree">
         <!-- Trunk -->
-        <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+        <a-box>
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+        </a-box>
         <!-- Pines -->
-        <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
-        <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
-        <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
-        <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
-        <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
-        <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+        <a-box>
+         <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+        </a-box>
+      </a-box>
+
+      <a-box class="tree" position="0 14.5 0" rotation="0 90 180">
+        <!-- Trunk -->
+        <a-box>
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+        </a-box>
+        <!-- Pines -->
+        <a-box>
+         <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+        </a-box>
+      </a-box>
+
+      <a-box class="tree" position="0 17.5 0">
+        <!-- Trunk -->
+        <a-box>
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+        </a-box>
+        <!-- Pines -->
+        <a-box>
+         <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+        </a-box>
+      </a-box>
+
       
       
       <a-plane position="0 0 -1" rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
