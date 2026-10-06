@@ -5,7 +5,7 @@
   <body>
     <a-scene>
       <a-box wireframe=true width="1.5" height="2" depth="3" position="-2 0 0">
-        <a-box wireframe="true" position="-0.25 0 0">
+        <a-box opacity="0" position="-0.25 0 0">
           <a-cylinder side="double" color="black" rotation="0 0 90" height="0.5" radius="0.75"></a-cylinder>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-30 -180 -90" position="-0.225 0.2 0.125"></a-torus>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-150 -180 -90" position="-0.225 0.2 -0.125"></a-torus>
@@ -15,7 +15,7 @@
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="90 -180 -90" position="-0.225 0 -0.2"></a-torus>
           <a-cylinder color="#C6DF46" rotation="0 0 90" radius="0.45" height="0.25" position="-0.15 0 0"></a-cylinder>
         </a-box>
-        <a-box wireframe="true" position="-0.25 0 -4" color="green">
+        <a-box opacity="0" position="-0.25 0 -4" color="green">
           <a-cylinder side="double" color="black" rotation="0 0 90" height="0.5" radius="0.75"></a-cylinder>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-30 -180 -90" position="-0.225 0.2 0.125"></a-torus>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-150 -180 -90" position="-0.225 0.2 -0.125"></a-torus>
@@ -25,7 +25,7 @@
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="90 -180 -90" position="-0.225 0 -0.2"></a-torus>
           <a-cylinder color="#C6DF46" rotation="0 0 90" radius="0.45" height="0.25" position="-0.15 0 0"></a-cylinder>
         </a-box>
-        <a-box wireframe="true" position="4.25 0 -4" color="blue" rotation="0 -180 0">
+        <a-box opacity="0" position="4.25 0 -4" color="blue" rotation="0 -180 0">
           <a-cylinder side="double" color="black" rotation="0 0 90" height="0.5" radius="0.75"></a-cylinder>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-30 -180 -90" position="-0.225 0.2 0.125"></a-torus>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-150 -180 -90" position="-0.225 0.2 -0.125"></a-torus>
@@ -35,7 +35,7 @@
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="90 -180 -90" position="-0.225 0 -0.2"></a-torus>
           <a-cylinder color="#C6DF46" rotation="0 0 90" radius="0.45" height="0.25" position="-0.15 0 0"></a-cylinder>
         </a-box>
-        <a-box wireframe="true" position="4.25 0 0" color="red" rotation="0 -180 0">
+        <a-box opacity="0" position="4.25 0 0" color="red" rotation="0 -180 0">
           <a-cylinder side="double" color="black" rotation="0 0 90" height="0.5" radius="0.75"></a-cylinder>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-30 -180 -90" position="-0.225 0.2 0.125"></a-torus>
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-150 -180 -90" position="-0.225 0.2 -0.125"></a-torus>
@@ -45,43 +45,52 @@
           <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="90 -180 -90" position="-0.225 0 -0.2"></a-torus>
           <a-cylinder color="#C6DF46" rotation="0 0 90" radius="0.45" height="0.25" position="-0.15 0 0"></a-cylinder>
         </a-box>
-        <a-box wireframe="true">
+        <a-box opacity="0">
           <a-cylinder color="#eb9534" radius="0.175" height="5.1" rotation="0 0 90" position="2 0 0"></a-cylinder>
         </a-box>
-        <a-box wireframe="true" position="0 0 -4">
+        <a-box opacity="0" position="0 0 -4">
           <a-cylinder color="#eb9534" radius="0.175" height="5.1" rotation="0 0 90" position="2 0 0"></a-cylinder>
         </a-box>
-        <a-box wireframe="true">
+        <a-box opacity="0">
           <a-box width="0.5" height="4.9" depth="0.5" position="2 0.25 0.75" rotation="90 90 0" color="#CCE9E7"></a-box>
-        </a-box wireframe="true">
+        </a-box opacity="0">
           <a-box position="2 1.280 1.125" rotation="15 0 0" scale="4.89 2.343 0.105" color="#C6DF46"></a-box>
           <a-box position="2 1.075 1.074" rotation="15 0 0" scale="4.89 1.211 0.105" color="#8BDDE9"></a-box>
-        <a-box wireframe="true">
+        <a-box opacity="0">
           <a-cylinder position="0.25 1.238 1.154" rotation="105 0 0" scale="1 0.05 1" radius="0.25" color="white"></a-cylinder>
-        </a-box wireframe="true">
-        <a-box position="3.5 0 0" wireframe="true">
+        </a-box opacity="0">
+        <a-box position="3.5 0 0" opacity="0">
           <a-cylinder position="0.25 1.238 1.154" rotation="105 0 0" scale="1 0.05 1" radius="0.25" color="white"></a-cylinder>
         </a-box>
-        <a-box wireframe="true">
+        <a-box opacity="0">
           <a-cylinder position="0.25 0.788 1.03" rotation="105 0 0" scale="1 0.05 1" radius="0.125" color="#FFEF28"></a-cylinder>
         </a-box>
-        <a-box position="3.5 0 0" wireframe="true">
+        <a-box position="3.5 0 0" opacity="0">
           <a-cylinder position="0.25 0.788 1.03" rotation="105 0 0" scale="1 0.05 1" radius="0.125" color="#FFEF28"></a-cylinder>
         </a-box>
-        <a-box wireframe="true">
+        <a-box opacity="0">
           <a-cylinder position="2 1.35 1.246" rotation="105 0 0" scale="1 0.328 1" radius="0.675" color="#C6DF46"></a-cylinder>
-          <a-box wireframe="true">
-            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162" rotation="-30 -80 -105" position="2.179 1.607 1.43"></a-torus>
+          <a-box opacity="0" rotation="-30 -80 -105" position="2.179 1.607 1.445">
+            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162"></a-torus>
           </a-box>
-          <a-box wireframe="true" rotation="-150 -80 -105">
-            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162" rotation="-30 -80 -105" position="2.179 1.607 1.43"></a-torus>
+          <a-box opacity="0" rotation="-30 80 105" position="1.837 1.607 1.445">
+            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162"></a-torus>
           </a-box>
-          <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-150 -90 -105" position="-0.225 0.2 -0.125"></a-torus>
-          <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-150 -90 -105" position="-0.225 -0.2 0.125"></a-torus>
-          <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-30 -90 -105" position="-0.225 -0.2 -0.125"></a-torus>
-          <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="-90 -90 -105" position="-0.225 0 0.2"></a-torus>
-          <a-torus color="#eb9534" openEnded="true" side="double" scale="0.165 0.051 0.162" rotation="90 -90 -105" position="-0.225 0 -0.2"></a-torus>
-          <a-cylinder color="#eb9534" radius="0.175" rotation="105 0 0" position="2.001 1.336 1.412" scale="1 0.009 1"></a-cylinder>
+          <a-box opacity="0" rotation="75 180 0" position="1.7 1.344 1.377">
+            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162"></a-torus>
+          </a-box>
+          <a-box opacity="0" rotation="75 180 0" position="2.3 1.344 1.377">
+            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162"></a-torus>
+          </a-box>
+          <a-box opacity="0">
+            <a-cylinder color="#eb9534" radius="0.175" rotation="105 0 0" position="2.001 1.336 1.422" scale="1 0.045 1"></a-cylinder>
+          </a-box>
+          <a-box opacity="0" rotation="-30 -80 -105" position="1.858 1.093 1.3175">
+            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162"></a-torus>
+          </a-box>
+          <a-box opacity="0" rotation="-30 80 105" position="2.142 1.093 1.3175">
+            <a-torus color="#eb9534" openEnded="true" side="double" scale="0.223 0.051 0.162"></a-torus>
+          </a-box>
         </a-box>
       </a-box>
       <a-sky color="#ECECEC"></a-sky>
