@@ -3,7 +3,7 @@
   </head>
   <body>
     <a-scene>
-    <a-box depth="0.1" position="-1.1 1.6 0"></a-box>
+    <!-- <a-box depth="0.1" position="-1.1 1.6 0"></a-box>
     <a-box depth="0.1" position="0 1.6 0"></a-box>
     <a-box depth="0.1" position="1.1 1.6 0"></a-box>
 
@@ -15,7 +15,20 @@
     <a-box depth="0.1" position="0 -0.6 0"></a-box>
     <a-box depth="0.1" position="1.1 -0.6 0"></a-box>
     <a-plane position="0 -2 -1" rotation="-90 0 0" width="50" height="50" color="black"></a-plane>
-    <a-sky color="black"></a-sky>
+    <a-sky color="black"></a-sky> -->
+    
+
+    <a-sphere position="-4 1.25 -2" radius="1.25" color="#EF2D5E" scale="2 1 1"></a-sphere>
+    <a-sphere position="0 1.25 -2" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-sphere position="4 1.25 -2" radius="1.25" color="#EF2D5E" scale="2 2 0.5"></a-sphere>
+    
+    <a-cylinder position="-3 0.75 1" radius="0.5" height="1" color="#FFC65D" segments-radial="3" rotation="-90 0 0"></a-cylinder>
+    <a-cylinder position="0 0.75 1" radius="0.5" height="1" color="#FFC65D"></a-cylinder>
+    <a-cylinder position="3 0.75 1" radius="0.5" height="0.1" color="#FFC65D" segments-radial="5" rotation="-90 0 0"></a-cylinder>
+
+    <a-sphere position="-4 4.25 -2" theta-start="0" theta-length="90" radius="1.25" color="#EF2D5E" side="double"></a-sphere>
+    <a-sphere position="0 4.25 -2" phi-start="0" phi-length="180" radius="1.25" color="#EF2D5E" side="double"></a-sphere>
+    <a-sphere position="4 4.25 -2" theta-start="0" theta-length="90" phi-start="0" phi-length="180" radius="1.25" color="#EF2D5E" side="double"></a-sphere>
     <a-camera position="0 1.1 4"></a-camera>
     </a-scene>
   </body>
