@@ -16,14 +16,14 @@ window.addEventListener("DOMContentLoaded",function() {
   */
   for (let i = 0; i < 20; i++) {
     let randomDod = document.createElement("a-dodecahedron");
-    let x = (Math.random() * 20)-10;
-    let y = (Math.random() * 20);
-    let z = (Math.random() * -20);
-    randomDod.setAttribute("position", `${x} ${y} ${z}`);
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    randomDod.setAttribute("color", `rgb(${r}, ${g}, ${b})`);
+    let x=(Math.random()*20)-10;
+    let y=(Math.random()*20);
+    let z=(Math.random()*-20);
+    randomDod.setAttribute("position",`${x} ${y} ${z}`);
+    let r=Math.floor(Math.random()*256);
+    let g=Math.floor(Math.random()*256);
+    let b=Math.floor(Math.random()*256);
+    randomDod.setAttribute("color",`rgb(${r}, ${g}, ${b})`);
     scene.append(randomDod);
   }
 })
