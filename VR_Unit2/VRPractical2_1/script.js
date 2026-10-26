@@ -8,18 +8,16 @@ window.addEventListener("DOMContentLoaded",function() {
     let x = rnd(-20,20);
     let z = rnd(-20,20);
     createTree(x,0,z);
+    //Task 2: Use the createCloud(...)  to add several clouds to the scene at various positions.
     createCloud(x,5,z);
   }
+  //Task 4: Use the createHouse(...)  to add several houses to the scene at various positions.
   for(let i = 0; i < 100; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
     createHouse(x,0,z);
   }
-
-   //Task 2: Use the createCloud(...)  to add several clouds to the scene at various positions.
-   //Task 4: Use the createHouse(...)  to add several houses to the scene at various positions.
 })
-
 /* Task 1: Create a function createCloud that,
       1) Accept an x, y and z position for where to place the cloud "entity"
       2) Create an entity to store all the components that will make up the cloud
@@ -75,21 +73,19 @@ function createHouse(x, y, z){
 }
 function createTree(x, y, z){
   let tree = document.createElement("a-entity");
-  
   let pines = document.createElement("a-cone");
   pines.setAttribute("color","green");
   pines.setAttribute("position","0 2 0");
   pines.setAttribute("height","2");
-  tree.append( pines );
+  tree.append(pines);
 
   let stump = document.createElement("a-cylinder");
   stump.setAttribute("position","0 1 0");
   stump.setAttribute("color","brown");
   stump.setAttribute("radius","0.25");
-  tree.append( stump );
-
+  tree.append(stump);
   tree.setAttribute("position",{x:x, y:y-0.5, z:z});
-  scene.append( tree )
+  scene.append(tree)
 }
 
 
