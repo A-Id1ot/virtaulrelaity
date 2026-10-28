@@ -8,7 +8,10 @@ window.addEventListener("DOMContentLoaded",function() {
     ball = document.querySelector("#pokemonball");
     ball.r=0;
     ball.ro=2;
+    ball.a=0;
+    ball.m=0.01;
     ballloop();
+    ballmove();
     rocket=document.querySelector("#rocket");
     rocket.y=1;
     rocket.yadd=0.01;
@@ -26,6 +29,11 @@ function ballloop(){
   ball.r += ball.ro;
   ball.setAttribute("rotation",{x:ball.r, y:0, z:0});
   window.requestAnimationFrame(ballloop);
+}
+function ballmove(){
+  ball.a += ball.m;
+  ball.setAttribute("position",{x:0, y:1, z:ball.a});
+  window.requestAnimationFrame(ballmove);
 }
 function carloop(){
   car.x += car.xadd;
