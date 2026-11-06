@@ -6,16 +6,14 @@ class UFO{
         this.dy = rnd(1,4)/10; 
         this.obj = document.createElement("a-entity");
         let inside = document.createElement("a-sphere");
-        inside.setAttribute("position", "0 1 -3");
-        inside.setAttribute("radius", "2");
-        inside.setAttribute("color", "cyan");
+        inside.setAttribute("position", "0 1.5 -3");
+        inside.setAttribute("radius", "1.5");
+        inside.setAttribute("color", "#6CC417");
         this.obj.append(inside);
-        let outer = document.createElement("a-torus");
+        let outer = document.createElement("a-sphere");
         outer.setAttribute("position", "0 1 -3");
-        outer.setAttribute("radius", "3")
-        outer.setAttribute("radius-tubular", "0.5");
-        outer.setAttribute("rotation", "90 0 0");
-        outer.setAttribute("color", "white");
+        outer.setAttribute("scale", "4 1 4");
+        outer.setAttribute("color", "grey");
         this.obj.append(outer);
         this.obj.setAttribute("position", {x:x,y:y,z:z});
         scene.append(this.obj);
