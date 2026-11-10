@@ -38,6 +38,17 @@ class Rocket{
         fin2.setAttribute("scale","0.25 1 2");
         fin2.setAttribute("height", "2");
         this.obj.append(fin2);
+        let sign = document.createElement("a-image");
+        sign.setAttribute("src","#rad");
+        sign.setAttribute("position","0 -4.5 1");
+        sign.setAttribute("scale","1 1 1");
+        this.obj.append(sign);
+        let sign2 = document.createElement("a-image");
+        sign2.setAttribute("src","#rad");
+        sign2.setAttribute("rotation","0 180 0");
+        sign2.setAttribute("position","0 -4.5 -1");
+        sign2.setAttribute("scale","1 1 1");
+        this.obj.append(sign2);
         this.obj.setAttribute("position", {x:x,y:y,z:z});
         scene.append(this.obj)
     }
