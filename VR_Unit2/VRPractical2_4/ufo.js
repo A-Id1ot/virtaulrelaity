@@ -16,13 +16,22 @@ class UFO{
         outer.setAttribute("color", "grey");
         this.obj.append(outer);
         this.obj.setAttribute("position", {x:x,y:y,z:z});
+        let light = document.createElement("a-cone");
+        light.setAttribute("position", "0 -5 -3");
+        light.setAttribute("radius-bottom", "2");
+        light.setAttribute("radius-top", "0.5");
+        light.setAttribute("height", "10");
+        light.setAttribute("color", "green");
+        light.setAttribute("opacity", "0.60");
+        this.obj.append(light);
         scene.append(this.obj);
     }
-    invade(){
+
+    invade() {
         this.y -= this.dy;
-        this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
-        if(this.y < 0){
-          this.y = 0;  
+        this.obj.setAttribute("position", { x: this.x, y: this.y, z: this.z });
+        if (this.y < 0) {
+            this.y = 0;
         }
     }
 }

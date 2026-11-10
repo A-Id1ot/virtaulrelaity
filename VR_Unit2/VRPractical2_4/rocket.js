@@ -3,7 +3,7 @@ class Rocket{
         this.x = x;
         this.y = y;
         this.z = z;
-        this.dy = rnd(1,3)/10;
+        this.dy = rnd(2,4)/10;
         this.obj = document.createElement("a-entity");
         let base = document.createElement("a-cylinder");
         base.setAttribute("color", "gray");
@@ -24,11 +24,29 @@ class Rocket{
         fire.setAttribute("radius-bottom","0.5");
         fire.setAttribute("height","4");
         this.obj.append(fire);
+        let fin1 = document.createElement("a-cone");
+        fin1.setAttribute("color", "red");
+        fin1.setAttribute("position", "0 -5.995 0");
+        fin1.setAttribute("rotation", "0 90 0");
+        fin1.setAttribute("scale","0.25 1 2");
+        fin1.setAttribute("height", "2");
+        this.obj.append(fin1);
+        let fin2 = document.createElement("a-cone");
+        fin2.setAttribute("color", "red");
+        fin2.setAttribute("position", "0 -5.995 0");
+        fin2.setAttribute("rotation", "0 180 0");
+        fin2.setAttribute("scale","0.25 1 2");
+        fin2.setAttribute("height", "2");
+        this.obj.append(fin2);
         this.obj.setAttribute("position", {x:x,y:y,z:z});
         scene.append(this.obj)
     }
     launch(){
         this.y += this.dy;
-        this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z})
+        this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
+        if(this.y > 75){
+            this.y = -10;
+            this.dy+= rnd(1,3)/25;
+        }
     }
 }
