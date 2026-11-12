@@ -3,7 +3,7 @@ class UFO {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.dy = rnd(1, 4) / 10;
+        this.dy = rnd(1,4)/10;
         this.time = 0;
         this.op = 0.6;
         this.obj = document.createElement("a-entity");
@@ -28,14 +28,14 @@ class UFO {
         this.obj.append(light);
         scene.append(this.obj);
     }
-    invade() {
+    invade(){
         this.y -= this.dy;
-        this.obj.setAttribute("position", { x: this.x, y: this.y, z: this.z });
-        if (this.y < 20) {
-            this.op = 0.6 * (this.y / 20);
-            this.obj.querySelector("a-cone").setAttribute("opacity", this.op);
+        this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
+        if(this.y < 20){
+            this.op = 0.6*(this.y/20);
+            this.obj.querySelector("a-cone").setAttribute("opacity",this.op);
         }
-        if (this.y < 0) {
+        if(this.y < 0){
             this.y = 0;
         }
     }
