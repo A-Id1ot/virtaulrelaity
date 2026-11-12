@@ -3,7 +3,7 @@ class UFO {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.dy = rnd(1,4)/10;
+        this.dy = rnd(1,4)/5;
         this.time = 0;
         this.op = 0.6;
         this.obj = document.createElement("a-entity");

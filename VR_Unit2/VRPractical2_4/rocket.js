@@ -61,7 +61,7 @@ class Rocket {
         scene.append(this.obj);
     }
     launch() {
-        this.dy = this.dy*1.0025;
+        this.dy = this.dy*1.005;
         this.y += this.dy;
         this.obj.setAttribute("position", { x: this.x, y: this.y, z: this.z });
         if (this.y > 150) {
