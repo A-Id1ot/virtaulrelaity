@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="meteor.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <a-scene>
+    <a-box wireframe=true id="leg"position="0 2 0">
+      <a-cylinder  height="2" position="0 -1 0" radius="0.25"></a-cylinder>
+    </a-box>
+
+    <a-box wireframe=true id="orbit" position="0 4 0">
+      <a-dodecahedron position="4 0 0" radius="0.5"></a-dodecahedron>
+    </a-box>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" color="#7BC8A4"></a-plane>
+      <a-camera position="0 1.4 5"></a-camera>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
