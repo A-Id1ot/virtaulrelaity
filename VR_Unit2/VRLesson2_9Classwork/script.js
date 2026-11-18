@@ -1,16 +1,16 @@
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "oxxoTxxxoxoooxoTxxxxxo",
+  "oxoxooooTxToTxxoTTTxxT",
+  "xxTxTToTxoToxTxoTooTox",
+  "oxxoxTxxxTTToTxTTxoToo",
+  "oxooxooxxTTToooxoTxxxT",
+  "TTxxooTxoTToTxTxxoooTo",
+  "oToTTxxoTxxxxoxoToxTTo",
+  "ToToxooxooToTxTTxTxooT",
+  "oxoxoToooxxTxooxoTTxxT",
+  "TxxxoxxoTxoxxoToxTooTx",
+  "oooxoTTooTToTxxxxTxoox",
+  "oxxxooxxxxTxoxToTxoxoo",
 ];
 let scene;
 
