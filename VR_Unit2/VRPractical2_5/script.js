@@ -11,25 +11,39 @@
 */
 
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "xpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "xpxpppppppppxpppppppppxpppppppypppppppppxppppppx",
+  "xpxxxpxpxxxpxpxxxpxxxpxpxxxxxpxxxxxpxxxpxpxxxxpx",
+  "xpppxpxpxpppxpppxpppxpxpppppxpppppxpxpxppppppxpx",
+  "xxxpxxxpxpxxxxxpxxxpxxxpxxxxxpxxxpxpxpxxxxxxpxpx",
+  "xpxpxpppxpxpxpppxpxpppppxpppppxpppxpppxpppxppxpx",
+  "xpxpxpxxxpxpxpxxxpxxxxxxxpxxxxxpxxxxxpxpxpxpxxpx",
+  "xpxpxpxpxpxpxpppxpppppppxpxpppxpxpppxpxpxpxppxpx",
+  "xpxpxpxpxpxpxxxpxxxxxpxpxpxxxpxpxxxpxpxpxpxxxxpx",
+  "xpxpxpxpppppxpxpppxpppxpxpppxpppppxpxpxpxppppppx",
+  "xpxpxpxxxxxpxpxxxpxpxxxpxxxpxxxxxpxpxpxpxxxxxxpx",
+  "xpppxpppppxpppxpppxpxpxpppxpppxpxpxpxpxpppxxpppx",
+  "xpxxxxxxxpxxxxxpxxxpxpxpxxxxxpxpxpxpxpxxxpxppxpx",
+  "xpppppxpppxpppppppppxpppxpppppxpxpxpppxpxpxpxxpx",
+  "xxxxxpxpxxxpxxxxxxxxxxxpxpxxxxxpxpxxxpxpxppppxpx",
+  "xpxpppxpppppxpppppppppxpxpxpppppxpppxpxpxxxxxxpx",
+  "xpxpxxxpxxxxxpxxxxxxxpxpxpxxxpxpxxxpxpxpxppppppx",
+  "xpppxpppppppxpxpxpppxpxpxpppxpxpxpppxpppxpxxxxpx",
+  "xpxxxxxxxxxxxpxpxpxpxpxpxxxpxpxxxpxxxxxpxpxppppx",
+  "xpppxpppppxpxpxpxpxpxpxpppxpxpppppxpppxpxpxpxxxx",
+  "xxxpxpxxxxxpxpxpxpxpxpxxxxxpxpxxxxxpxpxpxpxppppx",
+  "xpppppxxppppxpxpxpxpxpxpppxpxpppxpxpxpxxxpxxxxpx",
+  "xpxxxppppxxpppxpppxpppppxpppppxpppxppppppppppxpx",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxpx",
 ];
+
 
 /* Challenge 2
    Add appropriate classes to use as objects in your map.  Choose characters to represent these objects and position them on the map.   In Challenge 5 and 6, you will generate the map using the character representation of the objects you chose to place in the world. Get Creative!
 */
 
 let scene;
+let ufos = [];
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
@@ -37,10 +51,30 @@ window.addEventListener("DOMContentLoaded",function() {
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
     */ 
+    let row = maze[r];
+    let cols = row.split("");
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "x"){
+        new Wall(c,5,r);
+      }
+      else if(cols[c] == "p"){
+        new Ball(c,1,r);
+      }
+      if(cols[c] == "y"){
+        new Fall(c,5,r);
+      }
+    }
     /* Challenge 4
        Make an appropriate decision based on the characters you chose to enter 
        in the maze.  Create an instance of the corresponding object.
     */
+   loop();
   }
 
 })
+function loop(){
+  for (let ufo of ufos){
+    ufo.invade();
+  }
+  window.requestAnimationFrame(loop);
+}
