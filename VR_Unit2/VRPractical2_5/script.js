@@ -9,7 +9,7 @@
    position them in the maze.   In Challenge 3 and 4, you will generate the maze along with any other object 
    you chose to put in the maze.  Get Creative!
 */
-
+let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
 let maze = [
   "xpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "xpxpppppppppxpppppppppxpppppppypppppppppxppppppx",
@@ -47,6 +47,12 @@ let ufos = [];
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
+  for(let i = 0; i < 5; i++){
+    let x = rnd(0,47);
+    let z = rnd(3,26);
+    let ufo = new UFO(x,10,z);
+    ufos.push(ufo);
+  }
   for(let r = 0; r < maze.length; r++){
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
