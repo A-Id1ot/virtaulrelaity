@@ -3,7 +3,6 @@ class UFO {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.dx = 0.005;
         this.dz = 0.005;
         this.time = 0;
         this.op = 0.6;
@@ -27,15 +26,12 @@ class UFO {
         light.setAttribute("color", "green");
         light.setAttribute("opacity", this.op);
         this.obj.append(light);
+        this.obj.setAttribute("scale",{x:0.5,y:0.5,z:0.5});
         scene.append(this.obj);
     }
     invade(){
-        this.x += this.dx;
         this.z += this.dz;
         this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
-        if(this.x > 47||this.x<0){
-            this.dx = -this.dx;
-        }
         if(this.z > 26||this.z<3){
             this.dz = -this.dz;
         }
