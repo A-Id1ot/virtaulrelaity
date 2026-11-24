@@ -3,6 +3,7 @@ class UFO {
         this.x = x;
         this.y = y;
         this.z = z;
+        this.dx = 0.001;
         this.dz = 0.005;
         this.time = 0;
         this.op = 0.6;
@@ -30,8 +31,12 @@ class UFO {
         scene.append(this.obj);
     }
     invade(){
+        this.x += this.dx;
         this.z += this.dz;
         this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
+        if(this.x > 47||this.x<0){
+            this.dx = -this.dx;
+        }
         if(this.z > 26||this.z<3){
             this.dz = -this.dz;
         }
