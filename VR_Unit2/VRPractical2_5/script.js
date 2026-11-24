@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   for(let i = 0; i < 5; i++){
     let x = rnd(0,47);
-    let z = rnd(3,26);
+    let z = rnd(1,25);
     let ufo = new UFO(x,10,z);
     ufos.push(ufo);
   }

@@ -3,8 +3,8 @@ class UFO {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.dx = 0.001;
-        this.dz = 0.005;
+        this.dx = rnd(1,2)/1000;
+        this.dz = rnd(1,2)/1000;
         this.time = 0;
         this.op = 0.6;
         this.obj = document.createElement("a-entity");
@@ -20,10 +20,10 @@ class UFO {
         this.obj.append(outer);
         this.obj.setAttribute("position", { x: x, y: y, z: z });
         let light = document.createElement("a-cone");
-        light.setAttribute("position", "0 -5 -3");
+        light.setAttribute("position", "0 -10 -3");
         light.setAttribute("radius-bottom", "3");
         light.setAttribute("radius-top", "0.5");
-        light.setAttribute("height", "10");
+        light.setAttribute("height", "20");
         light.setAttribute("color", "green");
         light.setAttribute("opacity", this.op);
         this.obj.append(light);
@@ -37,7 +37,7 @@ class UFO {
         if(this.x > 47||this.x<0){
             this.dx = -this.dx;
         }
-        if(this.z > 26||this.z<3){
+        if(this.z > 25||this.z<1){
             this.dz = -this.dz;
         }
     }
